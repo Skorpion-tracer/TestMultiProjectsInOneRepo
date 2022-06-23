@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestDirectory", "TestDirect
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLibraryForGit", "ClassLibrary1\TestLibraryForGit.csproj", "{0A5CC57D-49EE-414B-95BF-DC057E668248}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryAutomaticCars", "LibraryAutomaticCars\LibraryAutomaticCars.csproj", "{968830DE-C6C1-4308-BBB7-4C95D49FFCAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0A5CC57D-49EE-414B-95BF-DC057E668248}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A5CC57D-49EE-414B-95BF-DC057E668248}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A5CC57D-49EE-414B-95BF-DC057E668248}.Release|Any CPU.Build.0 = Release|Any CPU
+		{968830DE-C6C1-4308-BBB7-4C95D49FFCAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{968830DE-C6C1-4308-BBB7-4C95D49FFCAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{968830DE-C6C1-4308-BBB7-4C95D49FFCAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{968830DE-C6C1-4308-BBB7-4C95D49FFCAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

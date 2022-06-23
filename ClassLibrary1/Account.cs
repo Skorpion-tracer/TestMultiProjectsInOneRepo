@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary1
+namespace TestLibraryForGit
 {
-    public class Class1
+    public class Account
     {
+        public string PetName { get; set; }
     }
 }
