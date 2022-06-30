@@ -33,6 +33,24 @@ namespace TestDirectory
             TestLicenseKey.License.Generate();
 
             //TestLicenseKey.License.Generate();
+            //TestLicenseKey.License.Generate();
+            //TestLicenseKey.License.Generate();
+            //TestLicenseKey.License.Generate();
+            //TestLicenseKey.License.Generate();
+            //TestLicenseKey.License.Generate();
+            //TestLicenseKey.License.Generate();
+            //TestLicenseKey.License.Generate();
+            //TestLicenseKey.License.Generate();
+            //TestLicenseKey.License.Generate();
+            //TestLicenseKey.License.Generate();
+            //TestLicenseKey.License.Generate();
+            //TestLicenseKey.License.Generate();
+            //TestLicenseKey.License.Generate();
+            //TestLicenseKey.License.Generate();
+            //TestLicenseKey.License.Generate();
+
+
+
             //CPUTest.GetSerialNaumberCPU();
             //string[] files = Directory.GetDirectories(dir2);
 
