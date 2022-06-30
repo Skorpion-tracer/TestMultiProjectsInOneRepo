@@ -1,34 +1,32 @@
-﻿using System;
+﻿using CPUTaskManager;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Management;
 using System.Text;
 using System.Threading;
+using System.Timers;
+using TestCPU;
 
 namespace TestDirectory
 {
     class Program
     {
-        static string dir1 = @"C:\Users\v.brazhnik\Pictures\Фасады ламината";
-        static string dir2 = @"C:\Users\v.brazhnik\Pictures\Результаты2Фасадов";
+        //static string dir1 = @"C:\Users\v.brazhnik\Pictures\Фасады ламината";
+        //static string dir2 = @"C:\Users\v.brazhnik\Pictures\Результаты2Фасадов";
+
         static void Main(string[] args)
         {
+            Console.WriteLine(int.MaxValue);
 
-            ManagementObjectSearcher ramMonitor = 
-                new ManagementObjectSearcher("SELECT TotalVisibleMemorySize,FreePhysicalMemory FROM Win32_OperatingSystem");
+            TestLicenseKey.License.Generate();
 
-            while (true)
-            {
-                foreach (ManagementObject objram in ramMonitor.Get())
-                {
-                    ulong totalRam = Convert.ToUInt64(objram["TotalVisibleMemorySize"]);
-                    ulong busyRam = totalRam - Convert.ToUInt64(objram["FreePhysicalMemory"]);
-                    Console.WriteLine("{0} %",(busyRam * 100) / totalRam);
-                }
-                Thread.Sleep(500);
-            }
-            
-
+            //TestLicenseKey.License.Generate();
+            //CPUTest.GetSerialNaumberCPU();
             //string[] files = Directory.GetDirectories(dir2);
 
             //string s = "";
@@ -75,5 +73,7 @@ namespace TestDirectory
             //    }
             //}
         }
+
     }
+
 }
