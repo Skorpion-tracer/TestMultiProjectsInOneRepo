@@ -24,6 +24,13 @@ namespace TestDirectory
             Console.WriteLine(int.MaxValue);
 
             TestLicenseKey.License.Generate();
+            TestLicenseKey.License.Generate();
+            TestLicenseKey.License.Generate();
+            TestLicenseKey.License.Generate();
+            TestLicenseKey.License.Generate();
+            TestLicenseKey.License.Generate();
+            TestLicenseKey.License.Generate();
+            TestLicenseKey.License.Generate();
 
             //TestLicenseKey.License.Generate();
             //CPUTest.GetSerialNaumberCPU();
