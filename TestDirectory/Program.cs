@@ -19,37 +19,29 @@ namespace TestDirectory
         //static string dir1 = @"C:\Users\v.brazhnik\Pictures\Фасады ламината";
         //static string dir2 = @"C:\Users\v.brazhnik\Pictures\Результаты2Фасадов";
 
+        static int[] array = new int[200];
+
         static void Main(string[] args)
         {
-            Console.WriteLine(int.MaxValue);
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = i;
+            }
 
-            TestLicenseKey.License.Generate();
-            TestLicenseKey.License.Generate();
-            TestLicenseKey.License.Generate();
-            TestLicenseKey.License.Generate();
-            TestLicenseKey.License.Generate();
-            TestLicenseKey.License.Generate();
-            TestLicenseKey.License.Generate();
-            TestLicenseKey.License.Generate();
+            for (int i = 0; i < array.Length; i++)
+            {
+                int a = array[i];
+            }
 
-            //TestLicenseKey.License.Generate();
-            //TestLicenseKey.License.Generate();
-            //TestLicenseKey.License.Generate();
-            //TestLicenseKey.License.Generate();
-            //TestLicenseKey.License.Generate();
-            //TestLicenseKey.License.Generate();
-            //TestLicenseKey.License.Generate();
-            //TestLicenseKey.License.Generate();
-            //TestLicenseKey.License.Generate();
-            //TestLicenseKey.License.Generate();
-            //TestLicenseKey.License.Generate();
-            //TestLicenseKey.License.Generate();
-            //TestLicenseKey.License.Generate();
-            //TestLicenseKey.License.Generate();
-            //TestLicenseKey.License.Generate();
-            //TestLicenseKey.License.Generate();
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = i;
+            }
 
-
+            for (int i = 0; i < array.Length; i++)
+            {
+                int a = array[i];
+            }
 
             //CPUTest.GetSerialNaumberCPU();
             //string[] files = Directory.GetDirectories(dir2);
