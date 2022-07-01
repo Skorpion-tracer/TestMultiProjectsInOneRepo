@@ -33,16 +33,6 @@ namespace TestDirectory
                 int a = array[i];
             }
 
-            for (int i = 0; i < array.Length; i++)
-            {
-                array[i] = i;
-            }
-
-            for (int i = 0; i < array.Length; i++)
-            {
-                int a = array[i];
-            }
-
             //CPUTest.GetSerialNaumberCPU();
             //string[] files = Directory.GetDirectories(dir2);
 
