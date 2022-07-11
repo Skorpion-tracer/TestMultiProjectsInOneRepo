@@ -23,6 +23,12 @@ namespace TestDirectory
 
         static void Main(string[] args)
         {
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+
             //string[] files = Directory.GetDirectories(dir2);
 
             //string s = "";
