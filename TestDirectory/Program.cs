@@ -9,6 +9,7 @@ using System.Linq;
 using System.Management;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Timers;
 using TestCPU;
 
@@ -34,6 +35,10 @@ namespace TestDirectory
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
+
+            Progress<string> progress = new Progress<string>();
+            progress.ProgressChanged += Progress_ProgressChanged;
+
 
             //string[] files = Directory.GetDirectories(dir2);
 
@@ -82,6 +87,46 @@ namespace TestDirectory
             //}
         }
 
+        public struct Void { }
+        public static async Task<TResult> WithCancellation<TResult>(this Task<TResult> originalTask, CancellationToken ct)
+        {
+            var cancelTask = new TaskCompletionSource<Void>();
+            using (ct.Register(t => ((TaskCompletionSource<Void>)t).TrySetResult(new Void()), cancelTask))
+            {
+                var any = await Task.WhenAny(originalTask, cancelTask.Task);
+                if (any == cancelTask.Task)
+                {
+                    ct.ThrowIfCancellationRequested();
+                }
+            }
+            return await originalTask;
+        }
+
+        private static void Progress_ProgressChanged(object sender, string e)
+        {
+            Console.WriteLine(e);
+        }
+
+        private static async Task TestProgress(IProgress<string> progress)
+        {
+            await Task.Run(() =>
+            {
+                while (true)
+                {
+                    int a = 5;
+                    try
+                    {
+                        int b = a / 0;
+                    }
+                    catch (Exception ex)
+                    {
+                        progress.Report(ex.Message);
+                    }
+                    Thread.Sleep(500);
+                }
+
+            });
+        }
     }
 
 }
