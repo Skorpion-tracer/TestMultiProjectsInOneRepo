@@ -25,11 +25,6 @@ namespace TestDirectory
         static void Main(string[] args)
         {
             Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
 
             Progress<string> progress = new Progress<string>();
             progress.ProgressChanged += Progress_ProgressChanged;
